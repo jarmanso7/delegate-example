@@ -10,12 +10,23 @@ namespace DelegateExample
     {
         static void Main(string[] args)
         {
-            // The code provided will print ‘Hello World’ to the console.
-            // Press Ctrl+F5 (or go to Debug > Start Without Debugging) to run your app.
-            Console.WriteLine("Hello World!");
-            Console.ReadKey();
+            var mark = new Mark();
 
-            // Go to http://aka.ms/dotnet-get-started-console to continue learning how to build a console app! 
+            Console.WriteLine(mark.AddNumbers(3, 3));
+            Console.WriteLine(mark.MultiplyNumbers(4, 4));
+        }
+    }
+
+    public class Mark
+    {
+        public int AddNumbers(int a, int b)
+        {
+            return a + b;
+        }
+
+        public int MultiplyNumbers(int a, int b)
+        {
+            return a * b;
         }
     }
 }
