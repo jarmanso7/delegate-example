@@ -15,7 +15,12 @@ namespace DelegateExample
             var mark = new Mark();
 
             Del d = mark.AddNumbers;
+            Console.WriteLine(d(3, 4));
 
+            d = mark.MultiplyNumbers;
+            Console.WriteLine(d(3, 4));
+
+            d = mark.DoAnotherThing;
             Console.WriteLine(d(3, 4));
         }
     }
@@ -30,6 +35,11 @@ namespace DelegateExample
         public int MultiplyNumbers(int a, int b)
         {
             return a * b;
+        }
+
+        public int DoAnotherThing(int a, int b)
+        {
+            return a + (b * 3);
         }
     }
 }
