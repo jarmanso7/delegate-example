@@ -15,13 +15,13 @@ namespace DelegateExample
             var mark = new Mark();
 
             Del d = mark.AddNumbers;
-            Console.WriteLine(d(3, 4));
+            Console.WriteLine(d.Invoke(3, 4));
 
             d = mark.MultiplyNumbers;
-            Console.WriteLine(d(3, 4));
+            Console.WriteLine(d.Invoke(3, 4));
 
             d = mark.DoAnotherThing;
-            Console.WriteLine(d(3, 4));
+            Console.WriteLine(d.Invoke(3, 4));
         }
     }
 
