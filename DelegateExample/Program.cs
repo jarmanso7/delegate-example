@@ -8,12 +8,15 @@ namespace DelegateExample
 {
     class Program
     {
+        delegate int Del(int x, int y);
+
         static void Main(string[] args)
         {
             var mark = new Mark();
 
-            Console.WriteLine(mark.AddNumbers(3, 3));
-            Console.WriteLine(mark.MultiplyNumbers(4, 4));
+            Del d = mark.AddNumbers;
+
+            Console.WriteLine(d(3, 4));
         }
     }
 
